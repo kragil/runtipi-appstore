@@ -1,0 +1,16 @@
+services:
+   jdownloader:
+    image: jaymoulin/jdownloader
+    container_name: jdownloader
+    restart: always
+    user: 1001:100
+    volumes:
+        - ${APP_DATA_DIR}/config>:/opt/JDownloader/app/cfg
+        - {ROOT_FOLDER_HOST}/media/Downloads:/opt/JDownloader/Downloads
+        - ${APP_DATA_DIR}/logs>:/opt/JDownloader/app/logs #optional
+        - ${APP_DATA_DIR}/extensions>:/opt/JDownloader/app/extensions #optional
+    environment: 
+            MYJD_USER: ${MYJD_USER} #optional (see [Identify](https://github.com/jaymoulin/docker-jdownloader#identify))
+            MYJD_PASSWORD: ${MYJD_PASSWORD} #optional (see [Identify](https://github.com/jaymoulin/docker-jdownloader#identify))
+    ports:
+        - 3129:3129 

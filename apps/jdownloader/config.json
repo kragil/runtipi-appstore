@@ -1,0 +1,32 @@
+{
+  "name": "Jdownloader",
+  "id": "jdownloader",
+  "available": true,
+  "short_desc": "Headless Jdownloader",
+  "author": "Udo",
+  "categories": ["utilities", "data"],
+  "description": "JDownloader is a download manager, written in Java, which allows automatic download of groups of files from one-click hosting sites.",
+  "tipi_version": 1,
+  "version": "48254",
+  "source": "https://github.com/mirror/jdownloader",
+  "exposable": true,
+  "supported_architectures": ["arm64", "amd64"]
+  "form_fields": [
+    {
+      "type": "text",
+      "label": "Username/E-Mail",
+      "max": 50,
+      "min": 3,
+      "required": true,
+      "env_variable": "MYJD_USER"
+    },
+    {
+      "type": "password",
+      "label": "Password",
+      "max": 50,
+      "min": 3,
+      "required": true,
+      "env_variable": "MYJD_PASSWORD"
+    }
+  ]
+}
